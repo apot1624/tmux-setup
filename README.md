@@ -21,3 +21,10 @@ git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 
 `prefix` + <kbd>alt</kbd> + <kbd>u</kbd>
 - remove/uninstall plugins not on the plugin list
+
+## Usage
+```bash
+git clone https://github.com/apot1624/tmux-setup.git /tmp/tmux-setup
+cp ~/.tmux.config ~/.tmux.config.bak
+cp /tmp/tmux-setup/.tmux.config* ~
+```
