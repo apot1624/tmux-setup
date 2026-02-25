@@ -25,6 +25,6 @@ git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 ## Usage
 ```bash
 git clone https://github.com/apot1624/tmux-setup.git /tmp/tmux-setup
-cp ~/.tmux.config ~/.tmux.config.bak
-cp /tmp/tmux-setup/.tmux.config* ~
+cp ~/.tmux.conf ~/.tmux.conf.bak
+cp /tmp/tmux-setup/.tmux.conf* ~
 ```
