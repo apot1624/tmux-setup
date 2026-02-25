@@ -1,4 +1,4 @@
-# List of plugins
+# List of plugins from https://github.com/tmux-plugins/list
 ## General
 set -g @plugin 'tmux-plugins/tmux-sensible' #Basic tmux settings everyone can agree on.
 set -g @plugin 'tmux-plugins/tmux-sidebar' #A sidebar with the directory tree for the current path. Tries to make tmux more IDE like.
