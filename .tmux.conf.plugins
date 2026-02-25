@@ -1,0 +1,119 @@
+# List of plugins
+## General
+set -g @plugin 'tmux-plugins/tmux-sensible' #Basic tmux settings everyone can agree on.
+set -g @plugin 'tmux-plugins/tmux-sidebar' #A sidebar with the directory tree for the current path. Tries to make tmux more IDE like.
+set -g @plugin 'tmux-plugins/tmux-open' #Tmux key bindings for quick opening of a highlighted file or url.
+set -g @plugin 'tmux-plugins/tmux-logging' #Easy logging and screen capturing.
+set -g @plugin 'tmux-plugins/tmux-fpp' #Quickly open any path on your terminal window in your $EDITOR of choice!
+set -g @plugin 'tmux-plugins/tmux-cowboy' #Kill hanging processes fast.
+#set -g @plugin 'akohlbecker/aw-watcher-tmux' #Allows monitoring activity in sessions and panes with [ActivityWatch](https://activitywatch.net).
+#set -g @plugin 'bjesus/muxile' #View and control your tmux session from your mobile.
+#set -g @plugin 'b0o/tmux-autoreload' #Watches your tmux configuration file and automatically reloads it on change.
+#set -g @plugin 'ofirgall/tmux-browser' #Web browser sessions attached to tmux sessions.
+#set -g @plugin 'idevtier/tmux-cargo' #Plugin for executing cargo commands
+#set -g @plugin 'phil/tmux-devcontainers' #Manage and interact with (Devcontainers)[https://containers.dev]
+#set -g @plugin 'lloydbond/tmux-floating-terminal' #A popup floating terminal window in tmux.
+#set -g @plugin 'sainnhe/tmux-fzf' #Use fzf to manage tmux environment.
+#set -g @plugin 'alberti42/tmux-fzf-links' #Quickly open any type of link, not only url, with your editor or browser or any app of your liking. It is a rewriting of [tmux-fzf-url](https://github.com/wfxr/tmux-fzf-url), and offers more flexibility and extensibility. It supports colors (e.g. $LS_COLORS).
+#set -g @plugin 'Peter-McKinney/tmux-fzf-open-files-nvim' #Tmux plugin to open files in neovim parsed from terminal output using fzf for selection.
+#set -g @plugin 'wfxr/tmux-fzf-url' #Quickly open any url on your terminal window using fzf!
+#set -g @plugin 'kristopolous/tmux-gentrify' #Move panes effortless between windows using a cut/paste clipboard flow.
+#set -g @plugin 'thepante/tmux-git-autofetch/' #Automatically fetches current opened git repositories on your tmux session 
+#set -g @plugin 'jaclu/tmux-menus' #Popup menus to handle commands that are hard to remember, and some custom actions.
+#set -g @plugin 'noscript/tmux-mighty-scroll' #Seamless mouse scroll.
+#set -g @plugin 'AngryMorrocoy/tmux-neolazygit' #Integration of [lazygit](https://github.com/jesseduffield/lazygit) with Tmux and neovim.
+#set -g @plugin 'joshmedeski/tmux-nerd-font-window-name' #Nerd Font icons for your tmux windows
+#set -g @plugin 'ChanderG/tmux-notify' #Tmux plugin to notify you when processes complete.
+#set -g @plugin 'trevarj/tmux-open-nvim' #Tmux plugin to help with opening files in an nvim pane. Pairs well with tmux-open or tmux-fingers.
+#set -g @plugin 'graemedavidson/tmux-pane-focus' #Resize panes on focus.
+#set -g @plugin 'jaclu/tmux-power-zoom' #Zoom pane to separate window, then unzoom it back into it's original location.
+#set -g @plugin '2KAbhishek/tmux-tilit' #Brings tiling window manager features and intuitive keybindings to your tmux workflow.
+#set -g @plugin 'alexwforsythe/tmux-which-key' #Allows users to select actions from a customizable popup menu
+#set -g @plugin 'ofirgall/tmux-window-name' #Names your tmux windows smartly.
+#set -g @plugin 'gcla/tmux-wormhole' #Download files and directories with magic wormhole.
+#set -g @plugin 'laktak/tome' #Script playbooks for frequent commands in any terminal application
+#set -g @plugin 'kiyoon/treemux' #A sidebar with the modern [Nvim-Tree](https://github.com/nvim-tree/nvim-tree.lua) file explorer for the current path, with bi-directional interaction in focus.
+
+## Copy Mode
+set -g @plugin 'tmux-plugins/tmux-copycat' #Enhances tmux search.
+set -g @plugin 'tmux-plugins/tmux-yank' #Plugin for copying to system clipboard. Works on MacOS, Linux and Cygwin.
+#set -g @plugin 'laktak/extrakto' #Allows you to select text from your window by fuzzy matching it through a set of filters with fzf. Look ma, no mouse!
+#set -g @plugin 'NHDaly/tmux-better-mouse-mode' #Better mouse responsivity in tmux.
+#set -g @plugin 'crispy1989/tmux-copy-toolkit' #Multi utility rapid copy toolkit.
+#set -g @plugin 'abhinav/tmux-fastcopy' #easymotion-style text copying
+
+## Navigation
+set -g @plugin 'tmux-plugins/tmux-pain-control' #Standard pane key-bindings for tmux.
+#set -g @plugin 'schasse/tmux-jump' #Vimium/Easymotion like navigation for tmux.
+#set -g @plugin 'whame/tmux-modal' #Execute complex tmux commands in just a few keystrokes with a modal mode that is designed to be efficient, easy to remember and comfortable.
+#set -g @plugin 'jaclu/tmux-mouse-swipe' #Switch Window or Session by clicking right mouse button and swiping.
+
+## Sessions
+set -g @plugin 'tmux-plugins/tmux-continuum' #Continuous saving of tmux environment. Automatic restore when tmux is started. Automatic tmux start when computer is turned on.
+set -g @continuum-restore 'on' #Last saved environment is automatically restored when tmux is started.
+set -g @plugin 'tmux-plugins/tmux-resurrect' #Persists tmux environment across system restarts.
+set -g @plugin 'tmux-plugins/tmux-sessionist' #Lightweight utils for manipulating sessions.
+#set -g @plugin 'joshmedeski/sesh' #Smart session manager for the terminal.
+#set -g @plugin 'AranBorkum/tmux-cookie-cutter' #An environment setup tool for pre-configuring windows and panes
+#set -g @plugin 'oluevaera/tmux-conda-inherit' #Make new tmux windows and panes inherit the currently active conda environment.
+#set -g @plugin 'thuanpham2311/tmux-fzf-session-switch' #Open or create a tmux session with fzf with a popup menu.
+#set -g @plugin 'spywhere/tmux-named-snapshot' #A tmux-resurrect extension for named snapshot support. Save and restore multiple snapshots to your will.
+#set -g @plugin 'niqodea/tmux-nested' #Alternative to [tmux-suspend](https://github.com/MunifTanjim/tmux-suspend), supports arbitrary levels of nesting.
+#set -g @plugin '27medkamal/tmux-session-wizard' #One prefix to control all your session creation, naming, switching, etc using [fzf](https://github.com/junegunn/fzf) & [zoxide](https://github.com/ajeetdsouza/zoxide)
+#set -g @plugin 'omerxx/tmux-sessionx' #A Tmux session manager, with Zoxide support, preview, fuzzy finding, and MORE
+#set -g @plugin 'MunifTanjim/tmux-suspend' #Lets you suspend local tmux session, so that you can work with nested remote tmux session painlessly.
+#set -g @plugin '2KAbhishek/tmux-tea' #Session manager with previews, integrations with tmuxinator, fzf, neovim and more.
+#set -g @plugin 'Subbeh/tmux-tpad' #A popup window session manager.
+#set -g @plugin 'lljbash/tmux-update-display' #When attaching to tmux session, update $DISPLAY for each tmux pane in that session.
+
+## Status Bar
+set -g @plugin 'tmux-plugins/tmux-battery' #Plug and play battery percentage and icon indicator.
+set -g @plugin 'tmux-plugins/tmux-cpu' #Plug and play cpu percentage and icon indicator.
+set -g @plugin 'tmux-plugins/tmux-maildir-counter' #Plugin that counts files on a specific mail directory.
+set -g @plugin 'tmux-plugins/tmux-net-speed' #Tmux plugin to monitor upload and download speed of one or all interfaces.
+set -g @plugin 'tmux-plugins/tmux-newsboat' #Display [newsboat](https://newsboat.org) counters in tmux status line.
+set -g @plugin 'tmux-plugins/tmux-online-status' #Tmux plugin that displays online status of your computer.
+set -g @plugin 'tmux-plugins/tmux-prefix-highlight' #Plugin that highlights when you press tmux prefix key.
+set -g @plugin 'tmux-plugins/tmux-urlview' #Quickly open any url on your terminal window!
+#set -g @plugin '2KAbhishek/tmux2k' #Highly customizable tmux status bar framework, providing you with a sleek and informative status bar.
+#set -g @plugin 'briansalehi/tmux-acpi' #Display ACPI information including thermal status, battery health, battery percentage, and adapter status.
+#set -g @plugin 'mateimicu/tmux-aws-vault' #Display current aws-vault context and time remaining in the session.
+#set -g @plugin 'Freed-Wu/tmux-bitahub' #Display GPU status of [bitahub](https://www.bitahub.com/) in status bar of tmux
+#set -g @plugin 'tassaron/tmux-df' #Output of `df` in the status bar
+#set -g @plugin 'Freed-Wu/tmux-digit' #Display digit signs (⓪ ① ② ③ ④ ⑤ ⑥ ⑦ ⑧ ⑨ ⑩ ⑪ ⑫ ⑬ ⑭ ⑮ ⑯ ⑰ ⑱ ⑲ ⑳) in status bar of tmux
+#set -g @plugin 'anghootys/tmux-ip-address' #Plugin for show public IP on status bar.
+#set -g @plugin 'imomaliev/tmux-keyboard-layout' #Show current keyboard layout in your status bar
+#set -g @plugin 'jonmosco/kube-tmux' #Plugin that lets you add the current Kubernetes context and namespace configured on kubectl to your tmux status bar.
+#set -g @plugin 'thewtex/tmux-mem-cpu-load' #CPU, RAM, and load monitor for use with tmux.
+#set -g @plugin 'MunifTanjim/tmux-mode-indicator' #Displays prompt indicating currently active Tmux mode.
+#set -g @plugin 'jaclu/tmux-mullvad' #Keep track of [Mullvad VPN](https://mullvad.net/) status.
+#set -g @plugin 'spywhere/tmux-now-playing' #Showing currently playing track in tmux status bar with music controls.
+#set -g @plugin 'jaclu/tmux-packet-loss' #Displays packet loss % if at or above the specified threshold level.
+#set -g @plugin 'Brutuski/tmux-piavpn' #Keep track of your [Private Internet Access](https://www.privateinternetaccess.com/) VPN status.
+#set -g @plugin 'ayzenquwe/tmux-ping' #Shows an average ping latency to a specified host.
+#set -g @plugin 'olimorris/tmux-pomodoro-plus' #A fork of tmux-pomodoro with more options and greater adherence to the technique.
+#set -g @plugin 'swaroopch/tmux-pomodoro' #Use Pomodoro technique with timer showing in tmux status bar.
+#set -g @plugin 'erikw/tmux-powerline' #A hackable status bar consisting of dynamic & beautiful looking powerline segments, written purely in bash.
+#set -g @plugin 'alexchaichan/tmux-spotify-tui' #Plugin that shows current playing song with [Spotify-TUI](https://github.com/Rigellute/spotify-tui).
+#set -g @plugin 'Brutuski/tmux-ticker' #Keep a track of popular market indexes and stock price.
+#set -g @plugin 'robhurring/tmux-uptime' #Display your system uptime in the tmux status line.
+#set -g @plugin 'aaronpowell/tmux-weather' #Display weather information in your terminal.
+#set -g @plugin 'Cian911/tmux-xdrip' #Tmux plugin that displays your glucose level & direction from xDrip in your terminal..
+
+## Themes
+#set -g @plugin 'catppuccin/tmux' #A soothing pastel theme for tmux.
+#set -g @plugin 'dracula/tmux' #Dark theme for tmux
+#set -g @plugin 'seebi/tmux-colors-solarized' #A solarized theme for tmux.
+#set -g @plugin 'leighmcculloch/tmux-colours-superhero' #A superhero themed tmux colour theme.
+#set -g @plugin 'erikw/tmux-dark-notify' #Make tmux's theme follow macOS dark/light mode.
+#set -g @plugin 'nordtheme/tmux' #An arctic, north-bluish clean and elegant tmux color theme
+#set -g @plugin 'Wabri/tmux-nord-plusplus' #An arctic, north-bluish clean and elegant tmux color theme with support for battery & pomodoro.
+#set -g @plugin 'imomaliev/tmux-peacock' #Per session color and style based on session name
+#set -g @plugin 'rose-pine/tmux' #All natural pine, faux fur and a bit of soho vibes for the classy minimalist for tmux.
+
+# Other examples:
+# set -g @plugin 'github_username/plugin_name'
+# set -g @plugin 'github_username/plugin_name#branch'
+# set -g @plugin 'git@github.com:user/plugin'
+# set -g @plugin 'git@bitbucket.com:user/plugin'
+
