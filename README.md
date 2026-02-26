@@ -1,17 +1,21 @@
 # tmux-setup
 tmux configuration setup
 
-## 执行 x tmux --setup 即可快速应用简约主题，并同步开启鼠标窗格控制功能。 
-```bash
-x tmux --setup
-```
-
 ## 先手动安装插件管理器tpm
 ```bash
 git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 ```
 
-## tpm Key bindings
+## Deploy configuration files
+```bash
+git clone https://github.com/apot1624/tmux-setup.git /tmp/tmux-setup
+cp ~/.tmux.conf ~/.tmux.conf.bak
+cp /tmp/tmux-setup/.tmux.conf ~
+cp /tmp/tmux-setup/.tmux.conf.plugins ~
+rm -r /tmp/tmux-setup
+```
+
+## Install plugins
 `prefix` + <kbd>I</kbd>
 - Installs new plugins from GitHub or any other git repository
 - Refreshes TMUX environment
@@ -22,9 +26,7 @@ git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 `prefix` + <kbd>alt</kbd> + <kbd>u</kbd>
 - remove/uninstall plugins not on the plugin list
 
-## Usage
+## 快速应用简约主题，并同步开启鼠标窗格控制功能。 
 ```bash
-git clone https://github.com/apot1624/tmux-setup.git /tmp/tmux-setup
-cp ~/.tmux.conf ~/.tmux.conf.bak
-cp /tmp/tmux-setup/.tmux.conf* ~
+x tmux --setup
 ```

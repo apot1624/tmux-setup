@@ -1,0 +1,142 @@
+# 参考：Tmux使用手册 https://louiszhai.github.io/2017/09/30/tmux
+# 默认需要引入的插件
+set -g @plugin 'tmux-plugins/tpm'
+set -g @plugin 'tmux-plugins/tmux-sensible'
+set -g @plugin 'tmux-plugins/tmux-yank'
+set -g @plugin 'tmux-plugins/tmux-fpp'
+# 这两个插件配合tpm实现自动保存会话的功能
+set -g @plugin 'tmux-plugins/tmux-resurrect'
+set -g @plugin 'tmux-plugins/tmux-continuum'
+
+# 引入其他插件的示例
+# set -g @plugin 'github_username/plugin_name' # 格式：github用户名/插件名
+# set -g @plugin 'git@github.com/user/plugin' # 格式：git@github插件地址
+
+# 配置tmux自动保存会话
+set -g @continuum-save-interval '15'
+set -g @continuum-restore 'on'
+set -g @resurrect-capture-pane-contents 'on'
+
+# 使用Ctrl+x代替Ctrl+b，因为Ctrl+b在bash命令行中表示光标向前移动一个字符
+#set -g prefix C-x #
+#unbind C-b # C-b即Ctrl+b键，unbind意味着解除绑定
+#bind C-x send-prefix # 绑定Ctrl+x为新的指令前缀
+
+# 从tmux v1.6版起，支持设置第二个指令前缀
+#set-option -g prefix2 ` # 设置一个不常用的`键作为指令前缀，按键更快些
+
+# C-b、C-x与emacs键位冲突，直接用`作为prefix，不使用prefix2
+set -g prefix ` #
+unbind C-b # C-b即Ctrl+b键，unbind意味着解除绑定
+bind ` send-prefix # 绑定`为新的指令前缀
+
+
+# 绑定快捷键为r来load新的配置
+bind r source-file ~/.tmux.conf \; display-message "Config reloaded.."
+
+# 绑定快捷键为s来运行save.sh
+bind s run ~/.tmux/plugins/tmux-resurrect/scripts/save.sh
+
+unbind '"'
+bind o splitw -v -c '#{pane_current_path}' # 垂直方向新增面板，默认进入当前目录
+unbind %
+bind v splitw -h -c '#{pane_current_path}' # 水平方向新增面板，默认进入当前目录
+
+#setw -g mode-mouse on # 支持鼠标选取文本等
+#setw -g mouse-resize-pane on # 支持鼠标拖动调整面板的大小(通过拖动面板间的分割线)
+#setw -g mouse-select-pane on # 支持鼠标选中并切换面板
+#setw -g mouse-select-window on # 支持鼠标选中并切换窗口(通过点击状态栏窗口名称)
+set-option -g mouse on # 等同于以上4个指令的效果
+
+# 绑定hjkl键为面板切换的上下左右键
+#bind -r k select-pane -U # 绑定k为↑
+#bind -r j select-pane -D # 绑定j为↓
+#bind -r h select-pane -L # 绑定h为←
+#bind -r l select-pane -R # 绑定l为→
+bind k select-pane -U # 绑定k为↑
+bind j select-pane -D # 绑定j为↓
+bind h select-pane -L # 绑定h为←
+bind l select-pane -R # 绑定l为→
+
+#bind -r e lastp # 选择最后一个面板
+#bind -r ^e last # 选择最后一个窗口
+#bind -r ^u swapp -U # 与前一个面板交换位置
+#bind -r ^d swapp -D # 与后一个面板交换位置
+
+# 绑定Ctrl+hjkl键为面板上下左右调整边缘的快捷指令
+#bind -r ^k resizep -U 10 # 绑定Ctrl+k为往↑调整面板边缘10个单元格
+#bind -r ^j resizep -D 10 # 绑定Ctrl+j为往↓调整面板边缘10个单元格
+#bind -r ^h resizep -L 10 # 绑定Ctrl+h为往←调整面板边缘10个单元格
+#bind -r ^l resizep -R 10 # 绑定Ctrl+l为往→调整面板边缘10个单元格
+bind -r UP resizep -U 3 # 绑定Ctrl+↑为往↑调整面板边缘3个单元格
+bind -r DOWN resizep -D 3 # 绑定Ctrl+↓为往↓调整面板边缘3个单元格
+bind -r LEFT resizep -L 3 # 绑定Ctrl+←为往←调整面板边缘3个单元格
+bind -r RIGHT resizep -R 3 # 绑定Ctrl+→为往→调整面板边缘3个单元格
+
+bind -r n next-window # 给n命令加上-r选项，使其可以重复按键
+bind -r p previous-window # 给p命令加上-r选项，使其可以重复按键
+bind x kill-pane # 直接关闭pane，不提示确认信息
+
+bind -r u resize-pane -Z # 用u代替z调整panel大小，方便按键
+bind / choose-tree -Zw # 用/代替w显示所有窗口，方便按键
+bind \\ choose-tree -Zs # 用\代替s显示所有会话，方便按键
+bind -r \; last # 选择最后一个窗口
+# Prompted join-pane
+bind -r J command-prompt -p "join pane from:" "join-pane -h -s '%%'"
+
+bind ` copy-mode # 用`代替[进入复制模式
+bind -T copy-mode-vi [ send-keys -X top-line # 用[使光标移动到最顶端
+bind -T copy-mode-vi ] send-keys -X bottom-line # 用]使光标移动到最底端
+bind -T copy-mode-vi J send-keys -X -N 5 cursor-down # 用J使光标快速向下移动
+bind -T copy-mode-vi K send-keys -X -N 5 cursor-up # 用K使光标快速向上移动
+bind -T copy-mode-vi ^k send-keys -X -N 5 scroll-up # 用Ctrl k快速向上滚屏
+bind -T copy-mode-vi ^j send-keys -X -N 5 scroll-down # 用Ctrl j快速向下滚屏
+bind -T copy-mode-vi H send-keys -X start-of-line # 用H使光标移动到行首
+bind -T copy-mode-vi L send-keys -X end-of-line # 用L使光标移动到行尾
+
+setw -g mode-keys vi # 开启vi风格后，支持vi的C-d、C-u、hjkl等快捷键
+bind -T copy-mode-vi v send-keys -X begin-selection
+bind -T copy-mode-vi y send-keys -X copy-selection-and-cancel
+
+
+set -g @resurrect-strategy-vim 'session' # for vim
+set -g @resurrect-strategy-nvim 'session' # for neovim
+set -g @resurrect-capture-pane-contents 'on' # 开启恢复面板内容功能
+set -g @resurrect-save-shell-history 'on'
+
+setw -g automatic-rename off
+setw -g allow-rename off
+
+set -g default-terminal "screen-256color"
+#set -g default-terminal "tmux-256color"
+
+set -g base-index 1 # 设置窗口的起始下标为1
+set -g pane-base-index 1 # 设置面板的起始下标为1
+set -g renumber-windows on # 自动重新编号窗口（关闭中间窗口后，后面的自动前移）
+
+# 自定义状态栏
+#set -g status-utf8 on # 状态栏支持utf8
+set -g status-interval 1 # 状态栏刷新时间
+set -g status-justify left # 状态栏列表左对齐
+setw -g monitor-activity on # 非当前窗口有内容更新时在状态栏通知
+set -g status-bg black # 设置状态栏背景黑色
+set -g status-fg yellow # 设置状态栏前景黄色
+set -g status-style "bg=black, fg=yellow" # 状态栏前景背景色
+set -g status-left "#[bg=#FF661D] ❐ #S " # 状态栏左侧内容
+set -g status-right 'Continuum status: #{continuum_status}' # 状态栏右侧内容
+set -g status-left-length 300 # 状态栏左边长度300
+set -g status-right-length 500 # 状态栏左边长度500
+set -wg window-status-format " #I #W " # 状态栏窗口名称格式
+set -wg window-status-current-format " #I:#W#F " # 状态栏当前窗口名称格式(#I：序号，#w：窗口名称，#F：间隔符)
+set -wg window-status-separator "" # 状态栏窗口名称之间的间隔
+set -wg window-status-current-style "bg=red" # 状态栏当前窗口名称的样式
+set -wg window-status-last-style "fg=red" # 状态栏最后一个窗口名称的样式
+set -g message-style "bg=#202529, fg=#91A8BA" # 指定消息通知的前景、后景色
+# 关闭状态栏
+set-option -g status off
+
+run-shell ~/.tmux/plugins/tmux-resurrect/resurrect.tmux
+run-shell ~/.tmux/plugins/tmux-continuum/continuum.tmux
+
+# 初始化tmux插件管理器(保证这行在~/.tmux.conf的非常靠后的位置)
+run '~/.tmux/plugins/tpm/tpm'
