@@ -98,9 +98,9 @@
 |前缀键 + Shift + j|向下调整 5 个单元格|tmux-pain-control|
 |前缀键 + Shift + k|向上调整 5 个单元格|tmux-pain-control|
 |前缀键 + Shift + l|向右调整 5 个单元格|tmux-pain-control|
-|前缀键 + ||垂直拆分（左右）|tmux-pain-control|
+|前缀键 + &#124;|垂直拆分（左右）|tmux-pain-control|
 |前缀键 + -|水平拆分（上下）|tmux-pain-control|
-|前缀键 + \|全宽垂直拆分（新窗格占整行高度）|tmux-pain-control|
+|前缀键 + &#92;|全宽垂直拆分（新窗格占整行高度）|tmux-pain-control|
 |前缀键 + _|全高水平拆分（新窗格占整列宽度）|tmux-pain-control|
 |前缀键 + <|将当前窗口向左移动一个位置|tmux-pain-control|
 |前缀键 + >|将当前窗口向右移动一个位置|tmux-pain-control|
@@ -112,11 +112,7 @@
 |前缀键 + S (Shift + s)|切换到上一个会话（类似原生的 L 键）。|tmux-sessionist|
 |前缀键 + @|将当前窗格提升为一个新会话。|tmux-sessionist|
 |前缀键 + Ctrl-@|将当前窗口提升为一个新会话。|tmux-sessionist|
-|前缀键 + t + 次键|将已标记的窗格（用 m 标记）加入当前会话/窗口，并切换过去。
-次键：
-• h/-/"：水平拆分加入
-• v/|/%：垂直拆分加入
-• f/@：全屏加入（作为新窗口）|tmux-sessionist|
+|前缀键 + t + 次键|将已标记的窗格（用 m 标记）加入当前会话/窗口，并切换过去。<br>次键：<br>• h/-/"：水平拆分加入<br>• v/&#124;/%：垂直拆分加入<br>• f/@：全屏加入（作为新窗口）|tmux-sessionist|
 
 
 ## 关闭tmux服务
