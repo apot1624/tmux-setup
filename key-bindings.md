@@ -78,24 +78,24 @@
 |**`前缀键 + Alt + u`** (小写 u)|移除/卸载不在插件列表中的插件（即清理废弃插件）。||
 |前缀键 + /|启动正则表达式搜索（也可输入普通字符串）。|tmux-copycat|
 |前缀键 + Ctrl-f|搜索文件路径。|tmux-copycat|
-|前缀键 + Ctrl-g|在 git status 输出中搜索文件。|tmux-copycat|
-|前缀键 + Alt-h|搜索 SHA-1/SHA-256 哈希（适用于 git log）。|tmux-copycat|
+|前缀键 + Ctrl-g|在 git status 输出中搜索文件。|tmux-copycat|
+|前缀键 + Alt-h|搜索 SHA-1/SHA-256 哈希（适用于 git log）。|tmux-copycat|
 |前缀键 + Ctrl-u|搜索 URL。|tmux-copycat|
 |前缀键 + Ctrl-d|搜索数字。|tmux-copycat|
 |前缀键 + Alt-i|搜索 IP 地址。|tmux-copycat|
 |(复制模式) n|跳转到下一个匹配项。|tmux-copycat|
 |(复制模式) N|跳转到上一个匹配项。||
 |(复制模式) Enter|（vi 模式）复制高亮匹配项。||
-|(复制模式) Ctrl-w 或 Alt-w|（emacs 模式）复制高亮匹配项。||
+|(复制模式) Ctrl-w 或 Alt-w|（emacs 模式）复制高亮匹配项。||
 |前缀键 + ]|tmux 默认粘贴键。||
 |前缀键 + y|复制当前命令行中的文本（支持多种 shell 和 REPL）。|tmux-yank|
 |前缀键 + Y|复制当前窗格的当前工作目录路径。||
 |(复制模式) y|复制选中内容到系统剪贴板。||
 |(复制模式) Y|复制选中内容并“粘贴”到命令行（即复制后立即模拟粘贴）。||
-|前缀键 + h 或 前缀键 + C-h|选择左侧窗格|tmux-pain-control|
-|前缀键 + j 或 前缀键 + C-j|选择下方窗格||
-|前缀键 + k 或 前缀键 + C-k|选择上方窗格||
-|前缀键 + l 或 前缀键 + C-l|选择右侧窗格||
+|前缀键 + h 或 前缀键 + C-h|选择左侧窗格|tmux-pain-control|
+|前缀键 + j 或 前缀键 + C-j|选择下方窗格||
+|前缀键 + k 或 前缀键 + C-k|选择上方窗格||
+|前缀键 + l 或 前缀键 + C-l|选择右侧窗格||
 |前缀键 + Shift + h|向左调整当前窗格 5 个单元格||
 |前缀键 + Shift + j|向下调整 5 个单元格||
 |前缀键 + Shift + k|向上调整 5 个单元格||
