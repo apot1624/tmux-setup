@@ -53,7 +53,7 @@
 |`prefix`|`t`|显示时钟|
 
 ## 插件快捷键
-插件列表：[https://github.com/tmux-plugins/list]https://github.com/tmux-plugins/list
+插件列表：[https://github.com/tmux-plugins/list](https://github.com/tmux-plugins/list)
 
 |快捷键|作用|插件|
 |-|-|-|
