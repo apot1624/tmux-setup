@@ -12,7 +12,7 @@ git clone https://github.com/apot1624/tmux-setup.git /tmp/tmux-setup
 cp ~/.tmux.conf ~/.tmux.conf.bak
 cp /tmp/tmux-setup/.tmux.conf ~
 cp /tmp/tmux-setup/.tmux.conf.plugins ~
-rm -r /tmp/tmux-setup
+rm -rf /tmp/tmux-setup
 ```
 
 ## Install plugins
