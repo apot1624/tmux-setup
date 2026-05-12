@@ -36,6 +36,7 @@ set -g @plugin 'tmux-plugins/tmux-cowboy' #Kill hanging processes fast.
 
 ## Copy Mode
 set -g @plugin 'tmux-plugins/tmux-copycat' #Enhances tmux search.
+run-shell ~/.tmux/plugins/tmux-copycat/copycat.tmux
 set -g @plugin 'tmux-plugins/tmux-yank' #Plugin for copying to system clipboard. Works on MacOS, Linux and Cygwin.
 #set -g @plugin 'laktak/extrakto' #Allows you to select text from your window by fuzzy matching it through a set of filters with fzf. Look ma, no mouse!
 #set -g @plugin 'NHDaly/tmux-better-mouse-mode' #Better mouse responsivity in tmux.
