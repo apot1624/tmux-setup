@@ -1,10 +1,10 @@
 # List of plugins from https://github.com/tmux-plugins/list
 ## General
 set -g @plugin 'tmux-plugins/tmux-sensible' #Basic tmux settings everyone can agree on.
-set -g @plugin 'tmux-plugins/tmux-sidebar' #A sidebar with the directory tree for the current path. Tries to make tmux more IDE like.
+#set -g @plugin 'tmux-plugins/tmux-sidebar' #A sidebar with the directory tree for the current path. Tries to make tmux more IDE like.
 set -g @plugin 'tmux-plugins/tmux-open' #Tmux key bindings for quick opening of a highlighted file or url.
 set -g @plugin 'tmux-plugins/tmux-logging' #Easy logging and screen capturing.
-set -g @plugin 'tmux-plugins/tmux-fpp' #Quickly open any path on your terminal window in your $EDITOR of choice!
+#set -g @plugin 'tmux-plugins/tmux-fpp' #Quickly open any path on your terminal window in your $EDITOR of choice!
 set -g @plugin 'tmux-plugins/tmux-cowboy' #Kill hanging processes fast.
 #set -g @plugin 'akohlbecker/aw-watcher-tmux' #Allows monitoring activity in sessions and panes with [ActivityWatch](https://activitywatch.net).
 #set -g @plugin 'bjesus/muxile' #View and control your tmux session from your mobile.
